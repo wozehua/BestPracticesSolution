@@ -1,0 +1,29 @@
+﻿<Project>
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AnalysisLevel>latest</AnalysisLevel>
+		<AnalysisMode>All</AnalysisMode>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+		<SatelliteResourceLanguages>xxx</SatelliteResourceLanguages>
+	</PropertyGroup>
+	<!--项目文件扩展名不为.dcproj的都加上SonarAnalyzer.CSharp-->
+	<!--.dcproj 是 Visual Studio 中 Docker Compose 项目的专用文件扩展名，主要用于管理和协调多个 Docker 容器的开发与部署。-->
+	<!--IncludeAssets属性的值为runtime; build; native; contentfiles; analyzers; buildtransitive，表示将包的依赖关系包含到项目中，但不将包的内容复制到输出目录-->
+	<!--SonarAnalyzer.CSharp是SonarQube的C#代码分析插件-->
+	<!--项目含有Benchmarks的不添加SonarAnalyzer.CSharp，这个会瞎报错-->
+	<ItemGroup Condition="'$(MSBuildProjectExtension)' != '.dcproj' And !$([System.String]::new('$(MSBuildProjectName)').Contains('Benchmarks'))">
+	<!--<ItemGroup Condition="'$(MSBuildProjectExtension)'!='.dcproj'" >-->
+		<PackageReference Include="SonarAnalyzer.CSharp">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<!--项目文件名名包含Benchmarks的都加上 BenchmarkDotNet引用-->
+	<ItemGroup Condition="$([System.IO.Path]::GetFileName('$(MSBuildProjectName)').Contains('Benchmarks'))">
+		<PackageReference Include="BenchmarkDotNet"/>
+	</ItemGroup>
+</Project>
+

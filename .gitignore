@@ -1,0 +1,32 @@
+# 忽略所有临时文件和文件夹
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.suo
+*.user
+*.userprefs
+*.pdb
+*.vshost.*
+*.cache
+*.pidb
+*.sbr
+
+# 忽略 NuGet 包
+packages/
+*.nupkg
+
+# 忽略日志文件
+*.log
+
+# 忽略测试结果文件
+TestResults/
+
+# 忽略 Visual Studio 分析工具生成的文件
+*.diagsession
+*.vsdiag
+
+# 忽略 .NET Core 生成的文件
+obj/
+bin/
+.vs/
