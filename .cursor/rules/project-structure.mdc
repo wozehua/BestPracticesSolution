@@ -1,0 +1,60 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# BestPracticesSolution 项目结构指南
+
+这是一个用于展示和测试各种.NET最佳实践的解决方案。该解决方案包含多个独立的项目模块,每个模块都专注于特定的技术点或最佳实践。
+
+## 核心项目模块
+
+### 基础设施项目
+- [CommonUtils/](mdc:CommonUtils) - 通用工具类和扩展方法
+- [Contracts/](mdc:Contracts) - 共享的接口定义和契约
+- [Web.Api/](mdc:Web.Api) - Web API项目,展示RESTful API最佳实践
+
+### 技术实践项目
+- [UseSerilog/](mdc:UseSerilog) - Serilog日志记录最佳实践
+- [UseMediatR/](mdc:UseMediatR) - MediatR中介者模式实现
+- [OpenTelemetryDemo/](mdc:OpenTelemetryDemo) - OpenTelemetry遥测示例
+- [GlobalErrorHandler/](mdc:GlobalErrorHandler) - 全局错误处理机制
+- [UseDotNetChannels/](mdc:UseDotNetChannels) - .NET Channel使用示例
+- [Polling池化技术/](mdc:Polling池化技术) - 轮询和对象池化技术
+- [序列化协议性能对比/](mdc:序列化协议性能对比) - 不同序列化协议的性能测试
+
+### 示例和演示项目
+- [TodoApi/](mdc:TodoApi) - Todo API示例项目
+- [NewFeatureDemo/](mdc:NewFeatureDemo) - .NET新特性演示
+- [DotNet9Demo/](mdc:DotNet9Demo) - .NET 9预览特性演示
+- [CSharpBasic/](mdc:CSharpBasic) - C#基础特性示例
+
+### 测试项目
+- [CommonUtilsTests/](mdc:CommonUtilsTests) - CommonUtils的单元测试
+
+## 项目配置
+
+### 构建配置
+- [Directory.Build.props](mdc:Directory.Build.props) - 项目级构建属性配置
+- [Directory.Packages.props](mdc:Directory.Packages.props) - 集中式包版本管理
+- [nuget.config](mdc:nuget.config) - NuGet包源和配置
+
+### 代码规范
+- [.editorconfig](mdc:.editorconfig) - 代码风格和格式化规则
+
+## 项目组织原则
+
+1. 每个技术实践项目都是独立的,可以单独运行和测试
+2. 共享的代码放在CommonUtils和Contracts项目中
+3. 所有项目遵循统一的代码规范和构建配置
+4. 使用Directory.Packages.props统一管理NuGet包版本
+5. 测试项目与对应的实现项目放在同一目录下
+
+## 开发指南
+
+1. 新功能开发应该创建新的独立项目
+2. 通用功能应该放在CommonUtils中
+3. 接口定义应该放在Contracts中
+4. 所有项目都应该包含适当的单元测试
+5. 遵循.editorconfig中定义的代码规范
+
