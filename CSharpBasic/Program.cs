@@ -5,3 +5,5 @@ var memory = new Memory<int>(number);
 var span = new Span<int>(number);
 Console.WriteLine(memory.Length);
 Console.WriteLine(span.Length);
+
+Task.Delay(1000).WaitAsync(new CancellationToken());
