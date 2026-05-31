@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/Benchmarks/">
+    <Project Path="使用结构体代替类Benchmarks/使用结构体代替类Benchmarks.csproj" />
     <Project Path="序列化协议性能对比/序列化协议性能对比Benchmarks.csproj" />
   </Folder>
   <Folder Name="/Solution Items/">
