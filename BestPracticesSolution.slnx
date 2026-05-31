@@ -1,0 +1,24 @@
+<Solution>
+  <Folder Name="/Benchmarks/">
+    <Project Path="序列化协议性能对比/序列化协议性能对比Benchmarks.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="CommonUtils/CommonUtils.csproj" />
+    <Project Path="Contracts/Contracts.csproj" />
+    <Project Path="CSharpBasic/CSharpBasic.csproj" />
+    <Project Path="GlobalErrorHandler/GlobalErrorHandler.csproj" />
+    <Project Path="OpenTelemetryDemo/OpenTelemetryDemo.csproj" />
+    <Project Path="Polling池化技术/Polling池化技术.csproj" />
+    <Project Path="UseMediatR/UseMediatR.csproj" />
+    <Project Path="UseSerilog/UseSerilog.csproj" />
+    <Project Path="Web.Api/Web.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="CommonUtilsTests/CommonUtilsTests.csproj" />
+  </Folder>
+</Solution>

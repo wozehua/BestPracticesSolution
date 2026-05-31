@@ -31,6 +31,13 @@ namespace 序列化协议性能对比Benchmarks
         private static readonly byte[] RawMemoryPack = SerializerUtils.MemoryPack(TestData.Origin);
         private static readonly byte[] RawMemoryPackBrotli = SerializerUtils.MemoryPackBrotli(TestData.Origin);
 
+        /// <summary>
+        /// 使用 System.Text.Json 进行 JSON 反序列化的基准测试方法
+        /// </summary>
+        /// <returns>反序列化后的 DemoClass 数组</returns>
+        /// <remarks>
+        /// 作为基准测试的基线（Baseline = true），其他序列化方法的性能将与此进行对比
+        /// </returns>
         [Benchmark(Baseline = true)]
         public static DemoClass[] TextJsonDeserialize()
         {
