@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using System.Security.Cryptography;
 using UseMediatR.MediatRModel;
 using UseMediatR.Notification;
 
@@ -13,7 +14,7 @@ var app = builder.Build();
 app.MapGet("/", () => "Hello World!");
 app.MapPost("/register", async (UserRegistrationRequest request, IMediator mediator) =>
 {
-    var userId = new Random().Next(1, 10000);
+    var userId = RandomNumberGenerator.GetInt32(1, 10000);
     await mediator.Publish(new UserRegisteredNotification(userId, request.Email));
     return Results.Ok(new { Message = "用户注册成功!", UserId = userId });
 });

@@ -25,4 +25,6 @@ namespace 使用结构体代替类Benchmarks
             return sha256.ComputeHash(data??new byte[10000]);
         }
     }
+
+
 }

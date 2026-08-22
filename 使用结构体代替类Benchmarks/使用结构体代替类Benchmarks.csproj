@@ -3,9 +3,11 @@
   <PropertyGroup>
     <TargetFrameworks>net10.0</TargetFrameworks>
     <OutputType>Exe</OutputType>
+	  <Nullable>annotations</Nullable>
+	  <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.DiagnosticsHub.BenchmarkDotNetDiagnosers"/>
+    <PackageReference Include="Microsoft.VisualStudio.DiagnosticsHub.BenchmarkDotNetDiagnosers" />
   </ItemGroup>
 </Project>

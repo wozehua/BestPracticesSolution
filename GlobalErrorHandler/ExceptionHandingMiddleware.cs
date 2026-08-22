@@ -31,7 +31,7 @@ namespace GlobalErrorHandler
                     Title = "Server Error",
                 };
                 context.Response.StatusCode = StatusCodes.Status500InternalServerError;
-                await context.Response.WriteAsJsonAsync(problemDetails);
+                await context.Response.WriteAsJsonAsync(problemDetails, CancellationToken.None);
             }
         }
     }
