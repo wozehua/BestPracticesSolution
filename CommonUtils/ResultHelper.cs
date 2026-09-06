@@ -71,5 +71,5 @@ namespace CommonUtils
         public string Name { get; set; } = string.Empty;
         public bool IsDeactivated { get; set; }
     }
-    
+
 }

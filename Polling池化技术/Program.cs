@@ -1,5 +1,5 @@
-﻿using System.Text;
-using Microsoft.Extensions.ObjectPool;
+﻿using Microsoft.Extensions.ObjectPool;
+using System.Text;
 
 //1. 引入创建对象池策略 
 var pooledPolicy = new DefaultPooledObjectPolicy<StringBuilder>();

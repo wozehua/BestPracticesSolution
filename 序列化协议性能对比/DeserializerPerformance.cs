@@ -2,8 +2,8 @@
 using BenchmarkDotNet.Order;
 using CommonUtils.SerializeUtils;
 using DemoClassProto;
-using MemoryPack.Compression;
 using MemoryPack;
+using MemoryPack.Compression;
 using MessagePack;
 using Microsoft.Diagnostics.Tracing.Parsers.MicrosoftWindowsTCPIP;
 using ProtoBuf;

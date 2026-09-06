@@ -2,18 +2,18 @@
 
 #define Seria 
 #define DeSeria
-using BenchmarkDotNet.Running;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Text.Json;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Order;
+using BenchmarkDotNet.Running;
 using DemoClassProto;
 using Google.Protobuf;
 using MemoryPack;
 using MemoryPack.Compression;
 using MessagePack;
 using ProtoBuf;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Text.Json;
 using 序列化协议性能对比Benchmarks;
 
 
@@ -31,6 +31,3 @@ Console.WriteLine($"MessagePackLz4Block:{SerializerPerformance.MessagePackLz4Blo
 Console.WriteLine($"MessagePackLz4BlockArray:{SerializerPerformance.MessagePackLz4BlockArray() / 1024.0:F}KB");
 Console.WriteLine($"MemoryPack:{SerializerPerformance.MemoryPack() / 1024.0:F}KB");
 Console.WriteLine($"MemoryPackBrotli:{SerializerPerformance.MemoryPackBrotli() / 1024.0:F}KB");
-
-
-

@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Diagnostics;
+﻿using GlobalErrorHandler.CustomerException;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using GlobalErrorHandler.CustomerException;
 
 namespace GlobalErrorHandler
 {

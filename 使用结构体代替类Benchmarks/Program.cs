@@ -2,7 +2,7 @@
 
 namespace 使用结构体代替类Benchmarks
 {
-    internal class Program
+    internal sealed class Program
     {
         static void Main(string[] args)
         {

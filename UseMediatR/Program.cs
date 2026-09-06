@@ -20,4 +20,3 @@ app.MapPost("/register", async (UserRegistrationRequest request, IMediator media
 });
 
 await app.RunAsync();
-

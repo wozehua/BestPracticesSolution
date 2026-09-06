@@ -22,7 +22,7 @@ namespace 使用结构体代替类Benchmarks
         [Benchmark]
         public byte[] Sha256()
         {
-            return sha256.ComputeHash(data??new byte[10000]);
+            return sha256.ComputeHash(data ?? new byte[10000]);
         }
     }
 
